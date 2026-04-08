@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Balasore </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://www.datocms-assets.com/32623/1738619740-bern_switzerland-1.jpg?auto=format');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0000ff;
+      margin-top: 50px;
+      align-items: center;
+      font-size: 60px;
+    }
+
+    .center-controls {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #2652ad;
+      color: white;
+    }
+
+    button {
+      background-color: #0033cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function redirectToLink() {
+      const selection = document.getElementById("placeType").value;
+      if (selection) {
+        window.location.href = selection;
+      } else {
+        alert("Please select a service before searching.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Find Nearby Services</h1>
+
+  <div class="center-controls">
+    <select id="placeType">
+      <option value="">-- Select --</option>
+      <option value="https://maps.app.goo.gl/yBqXJWN4uo234nAm6">Hospitals 🏥</option>
+      <option value="https://maps.app.goo.gl/DQeoMsDydwKkhAdXA">Schools 🏫</option>
+      <option value="https://www.google.com/maps/search/all+police+station+in+Balasore+district+/@21.4627161,86.8506257,17267m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D">Police Stations 👮‍♂️</option>
+      <option value="https://maps.app.goo.gl/5BijX1MMAXjwrC6K6">Fire Stations 🚒</option>
+      <option value="https://maps.app.goo.gl/CyPpNkZLeKFVAuvJ7">Medicine Stores 💊</option>
+    </select>
+
+    <button onclick="redirectToLink()">Search Nearby</button>
+  </div>
+</body>
+</html>

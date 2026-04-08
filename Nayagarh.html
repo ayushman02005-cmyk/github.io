@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Nayagarh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://www.datocms-assets.com/32623/1738619740-bern_switzerland-1.jpg?auto=format');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0000ff;
+      margin-top: 50px;
+      align-items: center;
+      font-size: 60px;
+    }
+
+    .center-controls {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #2652ad;
+      color: white;
+    }
+
+    button {
+      background-color: #0033cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function redirectToLink() {
+      const selection = document.getElementById("placeType").value;
+      if (selection) {
+        window.location.href = selection;
+      } else {
+        alert("Please select a service before searching.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Find Nearby Services</h1>
+
+  <div class="center-controls">
+    <select id="placeType">
+      <option value="">-- Select --</option>
+      <option value="https://maps.app.goo.gl/yUQtcJfqB9hnYGyQA">Hospitals 🏥</option>
+      <option value="https://maps.app.goo.gl/iuRRen2oSHrPTgMP8">Schools 🏫</option>
+      <option value="https://www.google.com/maps/place/Police+Station/@20.1274042,85.1064736,17z/data=!3m1!4b1!4m6!3m5!1s0x3a1864d3a728b28f:0x3700fc6e258e0ad4!8m2!3d20.1274042!4d85.1090485!16s%2Fg%2F11b7gprwl3?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D">Police Stations 👮‍♂️</option>
+      <option value="https://maps.app.goo.gl/18tm9jQY2JEduzQM7">Fire Stations 🚒</option>
+      <option value="https://maps.app.goo.gl/rzdy3K5QtrKUdMDz5">Medicine Stores 💊</option>
+    </select>
+
+    <button onclick="redirectToLink()">Search Nearby</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Sambalpur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://www.datocms-assets.com/32623/1738619740-bern_switzerland-1.jpg?auto=format');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0000ff;
+      margin-top: 50px;
+      align-items: center;
+      font-size: 60px;
+    }
+
+    .center-controls {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    select, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #2652ad;
+      color: white;
+    }
+
+    button {
+      background-color: #0033cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function redirectToLink() {
+      const selection = document.getElementById("placeType").value;
+      if (selection) {
+        window.location.href = selection;
+      } else {
+        alert("Please select a service before searching.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Find Nearby Services</h1>
+
+  <div class="center-controls">
+    <select id="placeType">
+      <option value="">-- Select --</option>
+      <option value="https://maps.app.goo.gl/FqcpT33ZohmsXsXQ9">Hospitals 🏥</option>
+      <option value="https://maps.app.goo.gl/DGqWz1Zb3D6X1xV88">Schools 🏫</option>
+      <option value="https://www.google.com/maps/search/all+police+station+in+Sambalpur/@21.4801086,83.9489824,14z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D">Police Stations 👮‍♂️</option>
+      <option value="https://www.google.com/maps/place/Fire+Station/@21.4693023,83.9695185,17z/data=!3m1!4b1!4m6!3m5!1s0x3a21167dce42666b:0xc1b5bd354e7b0935!8m2!3d21.4693023!4d83.9720934!16s%2Fg%2F1tmxcz_s?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D">Fire Stations 🚒</option>
+      <option value="https://maps.app.goo.gl/CV2oZ46EWnXcx97u5">Medicine Stores 💊</option>
+    </select>
+
+    <button onclick="redirectToLink()">Search Nearby</button>
+  </div>
+</body>
+</html>
